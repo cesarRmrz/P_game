@@ -38,9 +38,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: rocas_2
+    uniqueID: 3555790113
+    locked: 0
+  - name: piso
+    uniqueID: 3808944445
+    locked: 0
+  - name: rocas
+    uniqueID: 2338942823
+    locked: 0
   - name: piramide
     uniqueID: 1792981941
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: base
+    uniqueID: 3544958521
     locked: 0
