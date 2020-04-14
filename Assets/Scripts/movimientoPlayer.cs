@@ -5,8 +5,6 @@ using UnityEngine;
 public class movimientoPlayer : MonoBehaviour
 {
     public Animator animator,jumpAnimator;
-
-    public bool grounded;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +15,8 @@ public class movimientoPlayer : MonoBehaviour
     void Update()
     {
 
-       
+        Jump();
         animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        animator.SetBool("Grounded", grounded);
 
         //Vector3 horizontal = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
         //transform.position = transform.position + horizontal * 5f * Time.deltaTime;
@@ -36,14 +33,16 @@ public class movimientoPlayer : MonoBehaviour
         }
         transform.localScale = characterScale;
 
-        Jump();
-
     }
 
     void Jump()
     {
+<<<<<<< HEAD
        
         if (Input.GetButtonDown("Jump") && grounded)
+=======
+        if (Input.GetButtonDown("Jump"))
+>>>>>>> parent of 64c4180... Corrige Salto Jugador
         {
             jumpAnimator.SetFloat("Jump", Input.GetAxis("Jump"));
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
