@@ -42,7 +42,7 @@ public class movimientoPlayer : MonoBehaviour
 
     void Jump()
     {
-        Debug.Log("ENTER JUMP");
+       
         if (Input.GetButtonDown("Jump") && grounded)
         {
             jumpAnimator.SetFloat("Jump", Input.GetAxis("Jump"));
