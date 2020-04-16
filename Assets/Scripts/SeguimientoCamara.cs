@@ -17,7 +17,7 @@ public class SeguimientoCamara : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(jugadorSeguir.transform.position.x,
-            jugadorSeguir.transform.position.y - 1f,
+            jugadorSeguir.transform.position.y + 1f,
             transform.position.z);
     }
 }
