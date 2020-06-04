@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movimineto_Jugador : MonoBehaviour
 {
-    public Animator animator;
+    public Animator animator, jumpAnimator;
 
     public bool grounded;
     // Start is called before the first frame update
@@ -16,13 +16,15 @@ public class Movimineto_Jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+
         Vector3 horizontal = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
         transform.position = transform.position + horizontal * Time.deltaTime;
 
-       // Jump();
+        Jump();
     }
 
-    /*void Jump()
+    void Jump()
     {
         Debug.Log("ENTER JUMP");
         if (Input.GetButtonDown("Jump") && grounded)
@@ -31,6 +33,6 @@ public class Movimineto_Jugador : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
         }
 
-
-    }*/
+    
+    }
 }
